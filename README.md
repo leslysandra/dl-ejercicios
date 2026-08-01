@@ -13,7 +13,7 @@ Código y ejemplos del módulo de **Deep Learning**. Pensado como material de cl
 | `05_llm_generative/` | LLMs
 | `06_proyecto_final/` | Ejemplos de referencia para el proyecto final
 
-> Cada carpeta incluye su propio notebook o script, comentado, y un `README.md` corto con el objetivo del ejemplo y cómo correrlo.
+> Cada carpeta incluye su propio notebook o script comentado.
 
 ## Requisitos
 
