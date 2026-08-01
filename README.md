@@ -4,8 +4,8 @@ Código y ejemplos del módulo de **Deep Learning**. Pensado como material de cl
 
 ## Contenido del repositorio
 
-| Carpeta / archivo | Descripción | Sesión |
-|---|---|---|
+| Carpeta / archivo | Descripción |
+|---|---|
 | `01_perceptron/` | Perceptrón simple en Python puro, sin frameworks
 | `02_entrenamiento/` | Optimización y regularización (Keras/TensorFlow)
 | `03_cnn/` | Redes convolucionales y transfer learning
