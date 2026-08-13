@@ -7,11 +7,10 @@ Código y ejemplos del módulo de **Deep Learning**. Pensado como material de cl
 | Carpeta / archivo | Descripción |
 |---|---|
 | `01_perceptron/` | Perceptrón simple en Python puro, sin frameworks
-| `02_entrenamiento/` | Optimización y regularización (Keras/TensorFlow)
-| `03_cnn/` | Redes convolucionales y transfer learning
+| `02_optimizacion/` | Optimización y regularización
+| `03_arquitecturas/` | Redes convolucionales y transfer learning
 | `04_atencion/` | De RNN a mecanismos de atención
 | `05_llm_generative/` | LLMs
-| `06_proyecto_final/` | Ejemplos de referencia para el proyecto final
 
 > Cada carpeta incluye su propio notebook o script comentado.
 
