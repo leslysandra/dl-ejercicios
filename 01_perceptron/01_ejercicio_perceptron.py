@@ -1,3 +1,48 @@
+import numpy as np
+
+# Definir las funciones del módulo perceptron.py aquí
+
+def suma_ponderada(x1, x2, w1, w2, b):
+    return x1 * w1 + x2 * w2 + b
+
+def activacion_escalon(z):
+    return 1 if z >= 0 else 0
+
+def predecir(x1, x2, w1, w2, b):
+    z = suma_ponderada(x1, x2, w1, w2, b)
+    return activacion_escalon(z)
+
+def entrenar(datos_entrenamiento, tasa_aprendizaje, epocas, verbose=False):
+    # Inicialización de pesos y sesgo
+    w1 = np.random.rand()
+    w2 = np.random.rand()
+    b = np.random.rand()
+
+    historial_errores = []
+
+    for epoca in range(epocas):
+        total_error = 0
+        for x1, x2, y_real in datos_entrenamiento:
+            # Calcular la salida del perceptrón
+            z = suma_ponderada(x1, x2, w1, w2, b)
+            y_predicha = activacion_escalon(z)
+
+            # Calcular el error
+            error = y_real - y_predicha
+            total_error += abs(error)
+
+            # Actualizar pesos y sesgo
+            w1 += tasa_aprendizaje * error * x1
+            w2 += tasa_aprendizaje * error * x2
+            b += tasa_aprendizaje * error
+        
+        historial_errores.append(total_error)
+        if verbose:
+            print(f"Época {epoca+1}: Error total = {total_error:.3f}, Pesos = ({w1:.3f}, {w2:.3f}), Sesgo = {b:.3f}")
+
+    return w1, w2, b, historial_errores
+
+
 """
 01_ejercicio_perceptron — EJEMPLO FUNDAMENTOS DE DL
 
@@ -11,8 +56,6 @@ regla de aprendizaje) está definida una sola vez en perceptron.py,
 con comentarios detallados de cada fórmula. Este archivo se enfoca
 en el caso de uso: preparar los datos, entrenar y probar.
 """
-
-from perceptron import entrenar, predecir, suma_ponderada, activacion_escalon
 
 # ---------------------------------------------------------------------
 # 1) LOS DATOS DE ENTRADA (dataset de juguete, inventado para la clase)
